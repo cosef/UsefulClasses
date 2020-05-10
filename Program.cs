@@ -49,11 +49,11 @@ namespace CustomizablePasswordGenerator
             StringBuilder password = new StringBuilder();
             for (int i = 0; i < numberOfDigits; i++)
             {
-                password.Append(numbers[random.Next(numbers.Length)]);
+                password.Insert(random.Next(password.Length + 1),numbers[random.Next(numbers.Length)]);
             }
             for (int i = 0; i < numberOfSpecialChars; i++)
             {
-                password.Append(symbols[random.Next(symbols.Length)]);
+                password.Insert(random.Next(password.Length + 1),symbols[random.Next(symbols.Length)]);
             }
             int randomLength = maxLength;
             if (maxLength - maxLength > 0)
@@ -63,7 +63,7 @@ namespace CustomizablePasswordGenerator
             int remainingLength = randomLength - numberOfDigits - numberOfSpecialChars;
             for (int i = 0; i < remainingLength; i++)
             {
-                password.Append(allAllowed[random.Next(allAllowed.Length)]);
+                password.Insert(random.Next(password.Length + 1),allAllowed[random.Next(allAllowed.Length)]);
             }
 
             return password.ToString();
