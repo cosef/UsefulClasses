@@ -56,7 +56,7 @@ namespace CustomizablePasswordGenerator
                 password.Insert(random.Next(password.Length + 1),symbols[random.Next(symbols.Length)]);
             }
             int randomLength = maxLength;
-            if (maxLength - maxLength > 0)
+            if (maxLength - minLength > 0)
             {
                 randomLength = random.Next(maxLength - minLength + 1) + minLength;
             }
