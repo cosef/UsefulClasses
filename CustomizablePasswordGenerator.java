@@ -46,7 +46,7 @@ public class PasswordGenerator {
             password.insert(random.nextInt(password.length()+1), symbols[random.nextInt(symbols.length)]);
         }
        int randomLength = max_len;
-       if (max_len- max_len > 0){
+       if (max_len- min_len > 0){
            randomLength = random.nextInt(max_len-min_len+1) +min_len;
        }
        int remainingLength = randomLength - numberOfDigits - numberOfSpecialChars;
