@@ -4,22 +4,6 @@ import java.util.Scanner;
 
 public class PasswordGenerator {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter minimum length of password:");
-        int min_len = sc.nextInt();
-        System.out.println("Please enter maximum length of password:");
-        int max_len = sc.nextInt();
-        System.out.println("Please enter required number of digits in password:");
-        int numberOfDigits = sc.nextInt();
-        System.out.println("Please enter required number of special characters in password:");
-        int numberOfSpecialChars = sc.nextInt();
-        validateInput(min_len,max_len,numberOfDigits,numberOfSpecialChars);
-        String password = generatePassword(min_len,max_len,numberOfDigits,numberOfSpecialChars);
-        System.out.println("generated password is: " + password);
-        System.out.println("length is:"+password.length());
-    }
-
     private static void validateInput(int min_len, int max_len, int numberOfDigits, int numberOfSpecialChars) {
         if (max_len < min_len)
             throw  new IllegalArgumentException("Minimum length cannot be bigger than max length!");

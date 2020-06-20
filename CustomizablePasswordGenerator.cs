@@ -3,31 +3,8 @@ using System.Text;
 
 namespace CustomizablePasswordGenerator
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Please enter minimum length of password:");
-            int minimumLength = Int32.Parse(Console.ReadLine());
-
-            Console.WriteLine("Please enter maximum length of password:");
-            int maximumLength = Int32.Parse(Console.ReadLine());
-
-            Console.WriteLine("Please enter required number of digits in password:");
-            int numberOfDigits = Int32.Parse(Console.ReadLine());
-
-            Console.WriteLine("Please enter required number of special characters in password:");
-            int numberOfSpecialChars = Int32.Parse(Console.ReadLine());
-
-            PasswordGenerator.ValidateInput(minimumLength, maximumLength, numberOfDigits, numberOfSpecialChars);
-
-            string password = PasswordGenerator.GeneratePassword(minimumLength, maximumLength, numberOfDigits, numberOfSpecialChars);
-
-            Console.WriteLine("Generated Password is: " + password);
-            Console.WriteLine("Length is: " + password.Length);
-        }
-    }
-    class PasswordGenerator
+    
+    class CustomizablePasswordGenerator
     {
         public static void ValidateInput(int minLength, int maxLength, int numberOfDigits, int numberOfSpecialChars)
         {
