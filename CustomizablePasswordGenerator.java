@@ -2,7 +2,7 @@ import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 
-public class PasswordGenerator {
+public class CustomizablePasswordGenerator {
 
     private static void validateInput(int min_len, int max_len, int numberOfDigits, int numberOfSpecialChars) {
         if (max_len < min_len)
